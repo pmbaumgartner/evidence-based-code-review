@@ -85,4 +85,6 @@ Do not prescribe a redesign without examining callers and constraints. Prefer th
 - removes caller coordination
 - defines a special case out of existence
 
+Test the direction against a simplification counterfactual: would changing ownership, the state model, or the default flow remove concepts, or only extract and rename the same complexity? Prefer deletion when the source supports it. Accept that no simpler design may be justified.
+
 State uncertainty when evidence cannot distinguish a successful deep module from a risky concentration of responsibility.

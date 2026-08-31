@@ -66,12 +66,13 @@ After both lanes finish:
 
 Inspect each candidate's formal interface, informal contract, implementation, representative callers, relevant history, and comments or names that define the abstraction.
 
-Ask four questions:
+Ask five questions:
 
 1. **Complexity burden:** How much must developers know, and how often do they pay that cost?
 2. **Module depth:** Does a simple interface hide substantial knowledge and implementation complexity?
 3. **Complexity direction:** Is complexity handled once below the interface or repeatedly pushed onto callers?
 4. **Strategic direction:** Is the design becoming easier to change, or accumulating tactical exceptions?
+5. **Simplification counterfactual:** Could a small change to ownership, the state model, or the default flow delete branches, modes, wrappers, or coordination rather than merely relocate them?
 
 Before this stage, read [references/design-lenses.md](references/design-lenses.md) for the detailed *A Philosophy of Software Design* checks and interpretation cautions.
 
@@ -91,7 +92,7 @@ Report only source-validated observations. For each finding include:
 - **Evidence:** tool signal plus `path:line` observations
 - **Leaked knowledge or obscurity:** what readers or callers must know or discover
 - **Impact:** unnecessary complexity weighted by likely exposure
-- **Direction:** the smallest strategic improvement, not an unsupported redesign
+- **Direction:** the smallest strategic improvement that removes rather than relocates complexity, not an unsupported redesign
 
 ## Report shape
 
