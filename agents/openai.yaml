@@ -1,0 +1,12 @@
+interface:
+  display_name: "Evidence-Based Code Review"
+  short_description: "Review design complexity with independent evidence"
+  default_prompt: "Use $evidence-based-code-review to assess this repository's design complexity with independent SCC and graph evidence, then validate findings in source."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "scc"
+      description: "File metrics, history hotspots, and change coupling"
+    - type: "mcp"
+      value: "codebase-memory-mcp"
+      description: "Structural graph, source, coverage, and blast-radius evidence"
